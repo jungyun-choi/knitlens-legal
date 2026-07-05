@@ -1,0 +1,133 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>개인정보 처리방침 · KnitLens</title><style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+ line-height:1.7;max-width:760px;margin:0 auto;padding:32px 20px 80px;color:#1a1a1a;background:#fff}
+@media(prefers-color-scheme:dark){body{color:#e8e8e8;background:#141414}a{color:#7db3ff}}
+h1{font-size:1.7rem;margin:.2em 0 .6em;line-height:1.3}
+h2{font-size:1.25rem;margin:1.8em 0 .5em;padding-top:.3em}
+h3{font-size:1.05rem;margin:1.3em 0 .4em}
+hr{border:none;border-top:1px solid #ddd;margin:2em 0}
+@media(prefers-color-scheme:dark){hr{border-top-color:#333}}
+ul{padding-left:1.4em}li{margin:.3em 0}
+code{background:#f0f0f0;padding:.1em .35em;border-radius:4px;font-size:.9em}
+@media(prefers-color-scheme:dark){code{background:#2a2a2a}}
+a{color:#0b62d6}
+.nav{margin-bottom:1.5em;font-size:.9rem}
+</style></head>
+<body><div class="nav"><a href="./">홈</a> · <a href="./privacy.html">개인정보 처리방침</a> · <a href="./terms.html">이용약관</a></div><h1>KnitLens 개인정보 처리방침</h1>
+<p><strong>최종 업데이트</strong>: 2026-05-09</p>
+<p><strong>시행일</strong>: 출시일 (App Store/Play Store 등록일)</p>
+<p><strong>연락처</strong>: chil9199@gmail.com</p>
+<p>KnitLens (이하 &quot;본 앱&quot;) 은 「개인정보 보호법」 및 관련 법령에서 정한 사항을 준수하여 사용자의 개인정보를 안전하게 처리합니다.</p>
+<hr>
+<h2>1. 수집하는 개인정보 항목</h2>
+<h3>1-1. 회원가입 시 (선택)</h3>
+<ul>
+<li>이메일 주소</li>
+<li>비밀번호 (단방향 암호화 저장)</li>
+<li>이름 (선택)</li>
+</ul>
+<h3>1-2. 서비스 이용 시 자동 수집</h3>
+<ul>
+<li><strong>사용자가 촬영/업로드한 사진</strong> — 도안 생성 분석 목적</li>
+<li><strong>생성된 도안 데이터</strong> (재질, 게이지, 부위 정보 등) — 보관함 저장</li>
+<li><strong>앱 사용 통계</strong> — 크래시 정보, 오류 발생 시점 (Sentry)</li>
+<li><strong>기기 정보</strong> — OS 버전, 앱 버전 (디버깅 목적)</li>
+</ul>
+<h3>1-3. 결제 시 (Pro 가입자, 향후 출시)</h3>
+<ul>
+<li>App Store / Google Play 의 결제 영수증 (영수증 검증용)</li>
+<li><strong>본 앱은 신용카드 정보를 직접 수집하지 않습니다</strong> — Apple/Google 처리</li>
+</ul>
+<h3>1-4. 수집하지 않는 항목</h3>
+<ul>
+<li>사용자의 위치 정보</li>
+<li>연락처 / 주소록</li>
+<li>마이크 / 음성 데이터</li>
+<li>다른 앱 사용 기록</li>
+</ul>
+<hr>
+<h2>2. 개인정보 이용 목적</h2>
+<p>| 목적 | 사용 항목 |</p>
+<p>|---|---|</p>
+<p>| 도안 생성 (핵심 기능) | 촬영/업로드 사진 |</p>
+<p>| 보관함 (도안 저장 / 복원) | 이메일, 도안 데이터 |</p>
+<p>| 회원 인증 / 계정 관리 | 이메일, 비밀번호, 이름 |</p>
+<p>| 서비스 개선 (크래시 진단) | 크래시 정보, 기기 정보 |</p>
+<p>| Pro 결제 검증 (향후) | 결제 영수증 |</p>
+<hr>
+<h2>3. 사진 데이터 처리 — 핵심 안내</h2>
+<p>본 앱은 <strong>사용자 사진을 외부 AI 서비스 (Google Gemini Vision API) 로 전송</strong>하여 사물 형태를 분석합니다.</p>
+<h3>사진 처리 흐름</h3>
+<p>1. 사용자가 카메라/갤러리에서 사진 선택</p>
+<p>2. 사진을 Google Gemini Vision API 로 일시 전송 (HTTPS 암호화)</p>
+<p>3. AI 가 사물의 형태/색상/비율을 분석해 텍스트 형태의 데이터 (JSON) 반환</p>
+<p>4. 본 앱이 분석 결과로 도안 생성</p>
+<p>5. <strong>사용자 사진 원본은 본 앱 서버에 저장되지 않습니다</strong></p>
+<p>6. <strong>사용자 사진은 Google Gemini API 의 모델 학습에 사용되지 않습니다</strong> (Google Cloud Vertex AI 정책)</p>
+<h3>사진 데이터 보관</h3>
+<ul>
+<li>본 앱 서버: 저장 X</li>
+<li>사용자 기기: 사용자가 명시적 저장 (보관함) 시에만 도안과 함께 보관</li>
+<li>Google API: API 호출 처리 직후 폐기 (Vertex AI 정책)</li>
+</ul>
+<hr>
+<h2>4. 개인정보 보유 및 이용 기간</h2>
+<p>| 항목 | 보유 기간 |</p>
+<p>|---|---|</p>
+<p>| 회원 정보 (이메일, 이름) | 회원 탈퇴 시까지 |</p>
+<p>| 도안 데이터 | 회원 탈퇴 시까지 (사용자 명시 삭제 시 즉시) |</p>
+<p>| 사진 원본 | 분석 직후 폐기 |</p>
+<p>| 크래시 / 오류 정보 (Sentry) | 90일 |</p>
+<p>| 결제 영수증 | 5년 (전자상거래법) |</p>
+<hr>
+<h2>5. 개인정보 제3자 제공</h2>
+<p>본 앱은 다음 외부 서비스에 한해 사용자 데이터를 처리 위탁합니다.</p>
+<p>| 서비스 | 위탁 항목 | 위탁 사유 |</p>
+<p>|---|---|---|</p>
+<p>| Google Gemini API (Google LLC) | 사진 (분석 직후 폐기) | AI 도안 분석 |</p>
+<p>| Sentry (Functional Software Inc.) | 크래시/오류 정보 | 서비스 안정성 |</p>
+<p>| Apple App Store | 결제 영수증 (Pro) | 결제 처리 |</p>
+<p>| Google Play Store | 결제 영수증 (Pro) | 결제 처리 |</p>
+<p>| Railway (서버 호스팅) | 도안 데이터 | 보관함 서비스 |</p>
+<p>| Supabase (DB) | 회원 정보, 도안 데이터 | 데이터베이스 |</p>
+<p>| AdMob (Google) — 향후 출시 | 광고 ID, 기기 정보 | 광고 노출 |</p>
+<p>본 앱은 위 외에 사용자 동의 없이 제3자에게 개인정보를 제공하지 않습니다.</p>
+<hr>
+<h2>6. 사용자 권리</h2>
+<p>사용자는 언제든 다음 권리를 행사할 수 있습니다.</p>
+<p>| 권리 | 행사 방법 |</p>
+<p>|---|---|</p>
+<p>| 개인정보 열람 / 수정 | 앱 내 설정 → 내 계정 |</p>
+<p>| 회원 탈퇴 (전체 데이터 삭제) | 앱 내 설정 → 내 계정 → 탈퇴 (향후 추가) 또는 chil9199@gmail.com 요청 |</p>
+<p>| 로컬 데이터 초기화 (진행/메모/즐겨찾기) | 앱 내 설정 → 데이터 → 로컬 데이터 초기화 |</p>
+<p>| 도안 보관함 삭제 (전체) | 앱 내 보관함 → 전체 삭제 |</p>
+<p>| 개별 도안 삭제 | 앱 내 보관함 → 개별 도안 삭제 |</p>
+<p>| 동의 철회 | 앱 삭제 + chil9199@gmail.com 데이터 삭제 요청 |</p>
+<hr>
+<h2>7. 개인정보 안전 관리</h2>
+<ul>
+<li>비밀번호 단방향 암호화 (bcrypt)</li>
+<li>HTTPS/TLS 통신 암호화</li>
+<li>서버 접근 권한 최소화</li>
+<li>정기 보안 점검</li>
+</ul>
+<hr>
+<h2>8. 만 14세 미만 아동의 개인정보</h2>
+<p>본 앱은 <strong>만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다</strong>.</p>
+<p>만약 보호자가 자녀의 개인정보가 수집된 사실을 인지한 경우 chil9199@gmail.com 으로 연락 주시면 즉시 삭제합니다.</p>
+<hr>
+<h2>9. 개인정보 처리방침 변경</h2>
+<p>본 처리방침은 법령/서비스 변경에 따라 변경될 수 있으며, 변경 시 앱 내 공지를 통해 사전 안내합니다. 중대한 변경의 경우 사용자의 명시적 재동의를 받습니다.</p>
+<hr>
+<h2>10. 개인정보 보호책임자 / 문의</h2>
+<p>| 항목 | 내용 |</p>
+<p>|---|---|</p>
+<p>| 책임자 | KnitLens 개발자 |</p>
+<p>| 연락처 | chil9199@gmail.com |</p>
+<p>| 답변 기한 | 영업일 기준 7일 이내 |</p>
+<hr>
+<p><strong>문서 끝</strong></p></body></html>
